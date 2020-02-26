@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyQuizApp</string>
+    <string name="username">User Name</string>
+    <string name="password">Password</string>
+    <string name="registation">Registation</string>
+    <string name="login">Log In</string>
+    <string name="quiezztext">Quizz Game</string>
+    <string name="question">Question</string>
+    <string name="option1">Option A</string>
+    <string name="option2">Option B</string>
+    <string name="option3">Option C</string>
+    <string name="option4">Option D</string>
+    <string name="currectAns">Currect Answer</string>
+</resources>

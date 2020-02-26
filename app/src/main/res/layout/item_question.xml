@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F1F1F1"
+            android:layout_margin="4dp">
+
+            <TextView
+                android:id="@+id/item_Question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Question"
+                android:textColor="#000"
+                app:layout_constraintBottom_toBottomOf="@+id/questiontext"
+                app:layout_constraintStart_toEndOf="@+id/questiontext"
+                app:layout_constraintTop_toTopOf="@+id/questiontext"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/item_A_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:text="A Option"
+                android:textColor="#000"
+                app:layout_constraintStart_toEndOf="@+id/a_text"
+                app:layout_constraintTop_toBottomOf="@+id/item_Question" />
+
+            <TextView
+                android:id="@+id/item_B_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="B Option"
+                android:textColor="#000"
+                app:layout_constraintBottom_toBottomOf="@+id/b_text"
+                app:layout_constraintStart_toEndOf="@+id/b_text"
+                app:layout_constraintTop_toTopOf="@+id/b_text" />
+
+            <TextView
+                android:id="@+id/item_C_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="C Option"
+                android:textColor="#000"
+                app:layout_constraintStart_toStartOf="@+id/item_A_Text"
+                app:layout_constraintTop_toBottomOf="@+id/item_A_Text" />
+
+            <TextView
+                android:id="@+id/item_D_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="D Option"
+                android:textColor="#000"
+                app:layout_constraintBottom_toBottomOf="@+id/d_text"
+                app:layout_constraintStart_toEndOf="@+id/d_text"
+                app:layout_constraintTop_toTopOf="@+id/d_text" />
+
+            <TextView
+                android:id="@+id/item_Answer_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Answer"
+                android:textColor="#000"
+                app:layout_constraintBottom_toBottomOf="@+id/answer_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/answer_text"
+                app:layout_constraintTop_toTopOf="@+id/answer_text" />
+
+            <TextView
+                android:id="@+id/questiontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:text="Q :"
+                android:textColor="#F13D04"
+                app:layout_constraintStart_toEndOf="@+id/idNo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/a_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="A ."
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="@+id/item_Question"
+                app:layout_constraintTop_toBottomOf="@+id/questiontext" />
+
+            <TextView
+                android:id="@+id/b_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B ."
+                android:textColor="#00BCD4"
+                app:layout_constraintBottom_toBottomOf="@+id/item_A_Text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/a_text"
+                app:layout_constraintTop_toTopOf="@+id/item_A_Text" />
+
+            <TextView
+                android:id="@+id/c_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="C ."
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="@+id/a_text"
+                app:layout_constraintTop_toBottomOf="@+id/a_text" />
+
+            <TextView
+                android:id="@+id/d_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="D ."
+                android:textColor="#00BCD4"
+                app:layout_constraintEnd_toEndOf="@+id/b_text"
+                app:layout_constraintStart_toStartOf="@+id/b_text"
+                app:layout_constraintTop_toBottomOf="@+id/b_text" />
+
+            <TextView
+                android:id="@+id/answer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Ans :"
+                android:textColor="#58A004"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/c_text"
+                app:layout_constraintTop_toBottomOf="@+id/c_text" />
+
+            <TextView
+                android:id="@+id/idNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01"
+                android:textColor="#0C29CA"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

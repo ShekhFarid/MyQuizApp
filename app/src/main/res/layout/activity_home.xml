@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.HomeActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/questionID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#5F5E5E"
+                    android:ems="14"
+                    android:hint="@string/question"
+                    android:inputType="textPersonName"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/optionAID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="#5F5E5E"
+                    android:ems="14"
+                    android:hint="@string/option1"
+                    android:inputType="textPersonName"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintEnd_toEndOf="@+id/questionID"
+                    app:layout_constraintStart_toEndOf="@+id/aOpTextID"
+                    app:layout_constraintTop_toBottomOf="@+id/questionID" />
+
+                <EditText
+                    android:id="@+id/optionBID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="14"
+                    android:hint="@string/option2"
+                    android:inputType="textPersonName"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintEnd_toEndOf="@+id/optionAID"
+                    app:layout_constraintStart_toStartOf="@+id/optionAID"
+                    app:layout_constraintTop_toBottomOf="@+id/optionAID" />
+
+                <EditText
+                    android:id="@+id/optionCID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#5F5E5E"
+                    android:ems="14"
+                    android:hint="@string/option3"
+                    android:inputType="textPersonName"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintEnd_toEndOf="@+id/optionBID"
+                    app:layout_constraintStart_toStartOf="@+id/optionBID"
+                    app:layout_constraintTop_toBottomOf="@+id/optionBID" />
+
+                <EditText
+                    android:id="@+id/optionDID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#5F5E5E"
+                    android:ems="14"
+                    android:hint="@string/option4"
+                    android:inputType="textPersonName"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintEnd_toEndOf="@+id/optionCID"
+                    app:layout_constraintStart_toStartOf="@+id/optionCID"
+                    app:layout_constraintTop_toBottomOf="@+id/optionCID" />
+
+                <EditText
+                    android:id="@+id/currectAns"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#5F5E5E"
+                    android:ems="14"
+                    android:hint="@string/currectAns"
+                    android:inputType="textPersonName"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintEnd_toEndOf="@+id/optionDID"
+                    app:layout_constraintStart_toStartOf="@+id/optionDID"
+                    app:layout_constraintTop_toBottomOf="@+id/optionDID" />
+
+                <Button
+                    android:id="@+id/clearID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="clear"
+                    app:layout_constraintEnd_toStartOf="@+id/updateID"
+                    app:layout_constraintStart_toEndOf="@+id/addbtnID"
+                    app:layout_constraintTop_toBottomOf="@+id/currectAns" />
+
+                <Button
+                    android:id="@+id/addbtnID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add"
+                    app:layout_constraintBottom_toBottomOf="@+id/clearID"
+                    app:layout_constraintEnd_toStartOf="@+id/clearID"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/clearID" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clearID"
+                    tools:itemCount="10"
+                    tools:listitem="@layout/item_question" />
+
+                <TextView
+                    android:id="@+id/aOpTextID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="(A)"
+                    android:textColor="#000"
+                    app:layout_constraintBottom_toBottomOf="@+id/optionAID"
+                    app:layout_constraintEnd_toStartOf="@+id/optionAID"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/optionAID"
+                    app:layout_constraintVertical_bias="0.692" />
+
+                <TextView
+                    android:id="@+id/bOpTextID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(B)"
+                    android:textColor="#000"
+                    app:layout_constraintBottom_toBottomOf="@+id/optionBID"
+                    app:layout_constraintEnd_toEndOf="@+id/aOpTextID"
+                    app:layout_constraintStart_toStartOf="@+id/aOpTextID"
+                    app:layout_constraintTop_toTopOf="@+id/optionBID" />
+
+                <TextView
+                    android:id="@+id/cOpTextID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(C)"
+                    android:textColor="#000"
+                    app:layout_constraintBottom_toBottomOf="@+id/optionCID"
+                    app:layout_constraintEnd_toEndOf="@+id/bOpTextID"
+                    app:layout_constraintStart_toStartOf="@+id/bOpTextID"
+                    app:layout_constraintTop_toTopOf="@+id/optionCID" />
+
+                <TextView
+                    android:id="@+id/dOpTextID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(D)"
+                    android:textColor="#000"
+                    app:layout_constraintBottom_toBottomOf="@+id/optionDID"
+                    app:layout_constraintEnd_toEndOf="@+id/cOpTextID"
+                    app:layout_constraintStart_toStartOf="@+id/cOpTextID"
+                    app:layout_constraintTop_toTopOf="@+id/optionDID" />
+
+                <TextView
+                    android:id="@+id/ansTextID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Answer"
+                    android:textColor="#000"
+                    app:layout_constraintBottom_toBottomOf="@+id/currectAns"
+                    app:layout_constraintEnd_toEndOf="@+id/dOpTextID"
+                    app:layout_constraintHorizontal_bias="0.448"
+                    app:layout_constraintStart_toStartOf="@+id/dOpTextID"
+                    app:layout_constraintTop_toBottomOf="@+id/optionDID" />
+
+                <Button
+                    android:id="@+id/updateID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update"
+                    app:layout_constraintBottom_toBottomOf="@+id/clearID"
+                    app:layout_constraintEnd_toStartOf="@+id/deleteID"
+                    app:layout_constraintStart_toEndOf="@+id/clearID"
+                    app:layout_constraintTop_toTopOf="@+id/clearID" />
+
+                <Button
+                    android:id="@+id/deleteID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    app:layout_constraintBottom_toBottomOf="@+id/updateID"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/updateID"
+                    app:layout_constraintTop_toTopOf="@+id/updateID" />
+
+                <TextView
+                    android:id="@+id/idtextSimple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:visibility="gone"
+                    ads:layout_constraintStart_toStartOf="parent"
+                    ads:layout_constraintTop_toTopOf="@+id/optionAID" />
+
+                <TextView
+                    android:id="@+id/idtextSimple2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:visibility="gone"
+                    ads:layout_constraintEnd_toEndOf="parent"
+                    ads:layout_constraintTop_toBottomOf="@+id/questionID" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
